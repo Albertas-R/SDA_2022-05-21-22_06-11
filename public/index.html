@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Testing</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <p data-testid="desc" id="desc">initial description</p>
+    <button id="btn">change</button>
+    <input data-testid="input" id="input" type="text" />
+
+    <script>
+      const desc = document.querySelector("#desc");
+      const input = document.querySelector("#input");
+
+      document.querySelector("#btn").onclick = () => {
+        desc.innerText = input.value;
+
+        input.value = "";
+      };
+    </script>
+  </body>
+</html>
